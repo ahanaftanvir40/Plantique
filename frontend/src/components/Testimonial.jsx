@@ -19,7 +19,7 @@ function Testimonial() {
         })
 
         tl.from(containerRef.current, {
-            x: -1000
+            x: -100
         }).to(containerRef.current, {
             x: 0,
         })
