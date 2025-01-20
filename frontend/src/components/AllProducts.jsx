@@ -10,7 +10,7 @@ function AllProducts() {
 
     const imageContainerRef = useRef(null)
     const containerRef = useRef(null)
-    const containerRef2 = useRef(null)
+    
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -33,11 +33,7 @@ function AllProducts() {
             y: -500
         }, 'a')
 
-        tl.from(containerRef2.current, {
-            x: -140
-        }).to(containerRef2.current, {
-            x: 500
-        })
+       
     })
 
 
@@ -83,7 +79,7 @@ function AllProducts() {
                 <ProductCard />
             </div>
 
-            <Testimonial containerRef2={containerRef2} />
+            <Testimonial />
 
         </div>
     )

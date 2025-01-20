@@ -1,11 +1,11 @@
 import { MoveLeft, MoveRight } from "lucide-react"
 
-function Testimonial({ containerRef2 }) {
+function Testimonial() {
 
 
 
     return (
-        <div ref={containerRef2} className="mt-20  w-full">
+        <div className="mt-20  w-full">
             <div className="flex justify-around items-center h-full p-1 gap-28  ml-10 mr-10 rounded-t-2xl rounded-b-md bg-[#CAD2CB]">
                 <div className="textDiv mt-1 ">
                     <h1 className="text-7xl text-[#102B2C] font-light">&quot; Testimonial <br /> <span className="px-14">highlights &quot;</span></h1>
