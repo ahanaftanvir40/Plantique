@@ -28,7 +28,7 @@ function AllProducts() {
 
         }, 'a')
         tl.to(containerRef.current, {
-            y: -300
+            y: -500
         }, 'a')
     })
 

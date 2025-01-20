@@ -11,8 +11,9 @@ function Testimonial() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: '-50% 100%',
+                start: '-80% 100%',
                 scrub: true,
+
 
             }
         })
