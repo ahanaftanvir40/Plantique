@@ -1,32 +1,11 @@
 import { MoveLeft, MoveRight } from "lucide-react"
-import gsap from 'gsap'
-import { useRef } from "react"
-import { useGSAP } from "@gsap/react"
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
 
-function Testimonial() {
-    const containerRef = useRef(null)
-    useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: containerRef.current,
-                start: '-80% 100%',
-                scrub: true,
+function Testimonial({ containerRef2 }) {
 
 
-            }
-        })
-
-        tl.from(containerRef.current, {
-            x: -100
-        }).to(containerRef.current, {
-            x: 0,
-        })
-    })
 
     return (
-        <div ref={containerRef} className="mt-20  w-full">
+        <div ref={containerRef2} className="mt-20  w-full">
             <div className="flex justify-around items-center h-full p-1 gap-28  ml-10 mr-10 rounded-t-2xl rounded-b-md bg-[#CAD2CB]">
                 <div className="textDiv mt-1 ">
                     <h1 className="text-7xl text-[#102B2C] font-light">&quot; Testimonial <br /> <span className="px-14">highlights &quot;</span></h1>

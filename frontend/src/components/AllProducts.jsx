@@ -10,12 +10,14 @@ function AllProducts() {
 
     const imageContainerRef = useRef(null)
     const containerRef = useRef(null)
+    const containerRef2 = useRef(null)
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: '0% 100%',
                 scrub: true,
+
 
 
 
@@ -30,6 +32,12 @@ function AllProducts() {
         tl.to(containerRef.current, {
             y: -500
         }, 'a')
+
+        tl.from(containerRef2.current, {
+            x: -140
+        }).to(containerRef2.current, {
+            x: 500
+        })
     })
 
 
@@ -57,7 +65,7 @@ function AllProducts() {
                         </div>
                     </div>
                 </div>
-                <div className="dummy"></div>
+
                 <div ref={imageContainerRef} className="w-[600px] absolute bottom-[-280px] right-[-450px] ">
                     <img src="./plant3.png" alt="" className="w-[600px] h-[600px]" />
                 </div>
@@ -75,7 +83,7 @@ function AllProducts() {
                 <ProductCard />
             </div>
 
-            <Testimonial />
+            <Testimonial containerRef2={containerRef2} />
 
         </div>
     )
